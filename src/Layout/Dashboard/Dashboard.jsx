@@ -5,10 +5,12 @@ import { useState } from "react";
 
 const Dashboard = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(true);
-    const { logOut } = useAuth()
+    const { logOut, user } = useAuth()
+
     const toggleSidebar = () => {
         setSidebarOpen(!isSidebarOpen);
     };
+
 
     return (
         <div>
@@ -21,14 +23,19 @@ const Dashboard = () => {
                 <div className=" flex md:hidden lg:hidden">
                     <div className={isSidebarOpen ? "-ml-36 hidden" : " bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 w-22 md:w-64 lg:w-64 min-h-screen bg-gray-300"}>
                         <ul className=" menu text-black">
-                            <li>Admin home</li>
-                            <li><Link to={'/dashboard/manage'}>Manage Shop</Link></li>
+                            <div className="avatar mb-5">
+                                <div className="w-24 rounded-full">
+                                    <img src={user ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                                </div>
+                            </div>
+                            <li><Link to={'/dashboard'}>Dashboard</Link></li>
+                            <li><Link to={'/dashboard/task'}>All Task</Link></li>
                         </ul>
                         {/* shear content */}
                         <div className="divider bg-blue-400"></div>
                         <ul className=" menu text-black ">
                             <li><Link to={'/'}>Home</Link></li>
-                            <li><Link to={'/'}>Contact</Link></li>
+                            <li className=" btn btn-smbg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-black"><Link to={'/'} onClick={() => logOut()}>Logout</Link></li>
                         </ul>
 
                     </div>
@@ -39,15 +46,20 @@ const Dashboard = () => {
                 <div className=" hidden md:flex md:flex-col lg:flex lg:flex-col bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 w-64 min-h-screen bg-gray-300">
 
                     <ul className=" menu text-black">
-                        <li>Admin home</li>
-                        <li><Link to={'/dashboard/manage'}>Manage Shop</Link></li>
+                        <div className="avatar mb-5">
+                            <div className="w-24 rounded-full">
+                                <img src={user ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                            </div>
+                        </div>
+                        <li><Link to={'/dashboard'}>Dashboard</Link></li>
+                        <li><Link to={'/dashboard/task'}>All Task</Link></li>
                     </ul>
 
                     {/* shear content */}
                     <div className="divider bg-blue-400"></div>
                     <ul className=" menu text-black ">
                         <button><li className=" btn btn-sm bg-blue-600 my-5 text-black"><Link to={'/'}>Home</Link></li></button>
-                        <li className=" btn btn-sm bg-red-500 text-black"><Link to={'/'} onClick={() => logOut()}>Logout</Link></li>
+                        <li className=" btn btn-sm bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-black"><Link to={'/'} onClick={() => logOut()}>Logout</Link></li>
                     </ul>
 
                 </div>
