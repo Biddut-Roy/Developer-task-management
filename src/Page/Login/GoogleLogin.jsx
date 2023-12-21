@@ -1,11 +1,19 @@
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth"
-import toast, { Toaster } from "react-hot-toast";
+import Swal from "sweetalert2";
+import usePublicAxios from "../../Hooks/usePublicAxios";
 
 const GoogleLogin = () => {
     const { googleEntry } = useAuth()
+    const publicAxios = usePublicAxios()
     const navigate = useNavigate()
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    const path = location.pathname
+    const parts = path.split("/");
+    const pathName = parts.length > 1 ? parts[1] : null;
+
     const handelGoogleLogin = () => {
         googleEntry()
             .then((result) => {
@@ -14,10 +22,32 @@ const GoogleLogin = () => {
                     email: result.user?.email
 
                 }
-                console.log(result);
-                navigate("/");
-                toast.success('Successfully Login')
+                navigate(from, { replace: true });
+                Swal.fire({
+                    title: `${pathName} successfully `,
+                    showClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                        popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                });
+                publicAxios.put("/user", userData)
+                    .then(() => {
 
+                        // if (result.data) {
+                            
+                        // }
+
+                    });
     })
 }
 
@@ -27,10 +57,6 @@ return (
             <FcGoogle />
             Google
         </button>
-        <Toaster
-            position="top-center"
-            reverseOrder={false}
-        />
     </div>
 );
 };
