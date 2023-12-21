@@ -22,7 +22,7 @@ const GoogleLogin = () => {
 }
 
 return (
-    <div onClick={handelGoogleLogin} className=" my-5 flex justify-center">
+    <div onClick={handelGoogleLogin} className="">
         <button className=" btn flex">
             <FcGoogle />
             Google

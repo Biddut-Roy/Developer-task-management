@@ -20,7 +20,7 @@ const GithubLogin = () => {
     })
 }
     return (
-        <div onClick={handelGithubLogin} className=" my-5 flex justify-center">
+        <div onClick={handelGithubLogin} className="">
             <button className=" btn flex">
                 <FaGithub />
                 GitHub
