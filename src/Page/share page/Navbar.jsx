@@ -20,12 +20,12 @@ const Navbar = () => {
         }
 
         <li> <NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"/p"}>p</NavLink> </li>
+            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"/contact"}>Contact</NavLink> </li>
         
         <li> <NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"p2/"}>p2</NavLink> </li>
+            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"/services"}>Services</NavLink> </li>
         <li> <NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"/p3"}>p3</NavLink> </li>
+            isPending ? "pending" : isActive ? "bg-blue-800" : ""} to={"/gallery"}>Gallery</NavLink> </li>
 
     </>
 
