@@ -28,6 +28,7 @@ const Register = () => {
             headers: { "content-type": "multipart/form-data" }
         })
         if (res.data.success) {
+            console.log(data?.email, data?.password);
             createUser(data?.email, data?.password)
                 .then(() => {
                     userUpdateProfile(data?.firstName, res.data?.data?.display_url)
