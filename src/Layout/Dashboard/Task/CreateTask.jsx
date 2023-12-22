@@ -59,7 +59,7 @@ const CreateTask = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                            <div className=" grid grid-cols-2 gap-5">
+                            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Title</span>
@@ -86,7 +86,7 @@ const CreateTask = () => {
                                     </label>
                                     <textarea type='text' {...register("Descriptions")} placeholder="some text" className="input input-bordered" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control overflow-hidden">
                                     <label className=' mb-5'>Date:</label>
                                    <Controller
                                         name="date"
