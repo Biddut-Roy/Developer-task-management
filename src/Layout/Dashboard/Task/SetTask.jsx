@@ -83,9 +83,9 @@ const SetTask = ({ setTasks, task, tasks, }) => {
 
 
     return (
-        <div ref={drag} className={`relative  mt-2 shadow-md rounded-md cursor-grab ${isDragging ? "opacity-25" : "opacity-100"
+        <div  className={`relative  mt-2 shadow-md rounded-md cursor-grab ${isDragging ? "opacity-25" : "opacity-100"
             } `}>
-            <div className="card bg-primary text-primary-content">
+            <div  ref={drag} className="card bg-primary text-primary-content">
                 <div className="p-2 pb-6">
                     <h2 className="card-title">Title: {task.Title}</h2>
                     <p>{task.Descriptions}</p>
