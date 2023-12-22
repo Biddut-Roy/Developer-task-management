@@ -28,6 +28,7 @@ const Dashboard = () => {
                                     <img src={user ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                                 </div>
                             </div>
+                            <li><Link to={'/dashboard/profile'}>Profile</Link></li>
                             <li><Link to={'/dashboard'}>Dashboard</Link></li>
                             <li><Link to={'/dashboard/task'}>Task Management</Link></li>
                             <li><Link to={'/dashboard/all'}>All Task</Link></li>
@@ -52,6 +53,7 @@ const Dashboard = () => {
                                 <img src={user ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                             </div>
                         </div>
+                        <li><Link to={'/dashboard/profile'}>Profile</Link></li>
                         <li><Link to={'/dashboard'}>Dashboard</Link></li>
                         <li><Link to={'/dashboard/task'}>Task Management</Link></li>
                         <li><Link to={'/dashboard/all'}>All Task</Link></li>

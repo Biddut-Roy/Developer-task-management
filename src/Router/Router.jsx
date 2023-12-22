@@ -12,6 +12,7 @@ import Services from "../Page/Services/Services";
 import Contact from "../Page/Contact/Contact";
 import Gallery from "../Page/Gallary/Gallery";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../Layout/Dashboard/Profile/Profile";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
           {
             path: '/dashboard',
             element: <PrivateRoute><CreateTask /></PrivateRoute>,
+          },
+          {
+            path: '/dashboard/profile',
+            element: <PrivateRoute><Profile /></PrivateRoute>,
           },
           {
             path: '/dashboard/task',
