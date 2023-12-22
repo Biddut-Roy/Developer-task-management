@@ -29,7 +29,8 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <li><Link to={'/dashboard'}>Dashboard</Link></li>
-                            <li><Link to={'/dashboard/task'}>All Task</Link></li>
+                            <li><Link to={'/dashboard/task'}>Task Management</Link></li>
+                            <li><Link to={'/dashboard/all'}>All Task</Link></li>
                         </ul>
                         {/* shear content */}
                         <div className="divider bg-blue-400"></div>
@@ -52,7 +53,8 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <li><Link to={'/dashboard'}>Dashboard</Link></li>
-                        <li><Link to={'/dashboard/task'}>All Task</Link></li>
+                        <li><Link to={'/dashboard/task'}>Task Management</Link></li>
+                        <li><Link to={'/dashboard/all'}>All Task</Link></li>
                     </ul>
 
                     {/* shear content */}
