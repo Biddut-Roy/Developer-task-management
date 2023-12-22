@@ -10,9 +10,9 @@ const Footer = () => {
           </aside>
           <nav>
             <header className="footer-title">DTM System</header>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Dashboard</a>
+           <Link to={"/services"}><a className="link link-hover">About us</a></Link>
+           <Link to={"/contact"}>  <a className="link link-hover">Contact</a></Link>
+           <Link to={"/dashboard"}>  <a className="link link-hover">Dashboard</a></Link>
           </nav>
           <nav>
             <header className="footer-title">Social</header>

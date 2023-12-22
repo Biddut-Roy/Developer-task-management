@@ -57,7 +57,7 @@ const Navbar = () => {
 
                 {
                     user ?
-                        <NavLink ><button onClick={() => logOut()} className=" btn btn-neutral bg-blue-800  btn-sm">Log out</button></NavLink>
+                        <NavLink to={"/"} ><button onClick={() => logOut()} className=" btn btn-neutral bg-blue-800  btn-sm">Log out</button></NavLink>
                         :
                         <NavLink to={"/login"}><button className=" btn btn-primary bg-blue-800 btn-sm">Login</button></NavLink>
 

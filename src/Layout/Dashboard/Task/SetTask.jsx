@@ -29,7 +29,7 @@ const SetTask = ({ setTasks, task, tasks, }) => {
         publicAxios.delete(`/userData/${id}`)
             .then((res) => {
                 if (res.data.deletedCount) {
-                    toast.success('Task Remove', { icon: "💀" })
+                    toast.success('Task delete successful', { icon: "💀" })
                 }
             });
         const timeoutId = setTimeout(() => {
