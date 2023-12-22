@@ -86,7 +86,7 @@ const CreateTask = () => {
                 <button type="submit" className=' btn btn-primary btn-sm' >Create</button>
             </form> */}
 
-            <div className="hero min-h-screen w-full mx-auto bg-base-200">
+            <div className="hero min-h-screen w-full mx-auto bg-slate-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
