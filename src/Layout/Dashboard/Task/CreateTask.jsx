@@ -8,7 +8,7 @@ import usePublicAxios from '../../../Hooks/usePublicAxios';
 import useAuth from '../../../Hooks/useAuth';
 
 
-// const CreateTask = ({ tasks, setTasks }) => {
+
 const CreateTask = () => {
     const {user} = useAuth()
     const publicAxios = usePublicAxios()
@@ -18,26 +18,6 @@ const CreateTask = () => {
         name: '',
         status: 'todo',
     });
-
-
-    // const handleSubmits = (e) => {
-    //     e.preventDefault();
-    //     setTasks((prev) => {
-    //         const list = [...(prev || []), task];
-
-    //         localStorage.setItem("tasks", JSON.stringify(list));
-
-    //         return list;
-    //     });
-
-    //     toast.success('Task Created')
-
-    //     setTasks({
-    //         id: '',
-    //         name: '',
-    //         status: 'todo',
-    //     })
-    // };
 
     const {
         register,
@@ -75,17 +55,6 @@ const CreateTask = () => {
                 position="top-center"
                 reverseOrder={false}
             />
-            {/* <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    className="border-2 border-slate-400 bg-slate-100 rounded-1-64 px-1"
-                    value={task.name}
-                    onChange={(e) => setTask({ ...task, id: uuidv4(), name: e.target.value })}
-                />
-                <button type="submit" className=' btn btn-primary btn-sm' >Create</button>
-            </form> */}
-
             <div className="hero min-h-screen w-full mx-auto bg-slate-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shadow-2xl bg-base-100">

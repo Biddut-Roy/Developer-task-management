@@ -93,9 +93,6 @@ const Section = ({ status, completed, tasks, setTasks, ongoing, todos, publicAxi
                     console.log(res.data.modifiedCount);
                     toast.success('Task state change', { icon: "😊" })
                 });
-
-            // localStorage.setItem("tasks", JSON.stringify(mTasks));
-            // toast.success('Task state change' , {icon : "😊"})
             return mTasks;
         })
     }
