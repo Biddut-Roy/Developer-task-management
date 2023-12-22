@@ -1,8 +1,12 @@
-# React + Vite
+# Task Management Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## live Link : https://task-management-b3f7f.web.app
 
-Currently, two official plugins are available:
+## Project Feather
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Projects can be dragged and dropped using Project DNT.
+- This card has edit and delete functions.
+- The dashboard provides user profiles and the services section includes what types of users use it and their benefits.
+
+
+## used Tecnology : React , Firebase , Javascript
